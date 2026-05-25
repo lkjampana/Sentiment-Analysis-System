@@ -139,6 +139,7 @@ class SentimentClassifier:
             vectorizer_path (str): Path to save the vectorizer
         """
         os.makedirs(os.path.dirname(model_path), exist_ok=True)
+        os.makedirs(os.path.dirname(vectorizer_path), exist_ok=True)
         
         with open(model_path, 'wb') as f:
             pickle.dump(self.classifier, f)
